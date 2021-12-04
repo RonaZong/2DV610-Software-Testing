@@ -1,0 +1,9 @@
+
+t
+java:S14882"YImmediately return this expression instead of assigning it to the temporary variable "p".(Ì¸Ö¦úÿÿÿÿ
+D
+java:S1125E")Remove the literal "false" boolean value.(„úÀÿÿÿÿÿ
+D
+java:S1125H")Remove the literal "false" boolean value.(§óÉ¢úÿÿÿÿ
+\
+java:S1126X"AReplace this if-then-else statement by a single return statement.(ÀâÌèûÿÿÿÿ

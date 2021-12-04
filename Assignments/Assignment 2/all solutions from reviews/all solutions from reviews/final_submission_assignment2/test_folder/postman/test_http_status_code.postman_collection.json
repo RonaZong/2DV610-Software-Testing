@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "a4427875-e910-4df4-911e-72ac360a420c",
+		"name": "test_http_status_code",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test status code for http method GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6836e11c-2a7f-42fb-8996-710945b2bc7a",
+						"exec": [
+							"pm.test('GET should return 200', function (){",
+							"    pm.response.to.have.status(200);",
+							"    console.log(\"Response status code: \" + pm.response.status + \" \" + pm.response.code);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test status code for http method POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "73fa65dc-0589-4200-84d8-300306872ab6",
+						"exec": [
+							"pm.test('POST should return 405', function (){",
+							"    pm.response.to.have.status(405);",
+							"    console.log(\"Response status code: \" + pm.response.status + \" \" + pm.response.code);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test status code for http method  DELETE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8508aac7-c209-41a4-96ea-aa054ffa7b10",
+						"exec": [
+							"pm.test('DELETE should return 405', function (){",
+							"    pm.response.to.have.status(405);",
+							"    console.log(\"Response status code: \" + pm.response.status + \" \" + pm.response.code);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test status code for http method  PUT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "369cf84d-4ca3-475c-9ade-f46b39b0cd34",
+						"exec": [
+							"pm.test('PUT should return 405', function (){",
+							"    pm.response.to.have.status(405);",
+							"    console.log(\"Response status code: \" + pm.response.status + \" \" + pm.response.code);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test status code for http method  OPTIONS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1c7c3a97-e3e1-4a37-abe4-3765b21e971c",
+						"exec": [
+							"pm.test('OPTIONS should return 405', function (){",
+							"    pm.response.to.have.status(405);",
+							"    console.log(\"Response status code: \" + pm.response.status + \" \" + pm.response.code);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test status code for http method  GET with invalid path to resource folder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2d4e15d3-ee62-4400-ab8e-56389bcb781c",
+						"exec": [
+							"pm.test('GET with invalid path should return status code 404', function (){",
+							"    pm.response.to.have.status(404);",
+							"    console.log(\"Response status code: \" + pm.response.status + \" \" + pm.response.code);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/invalid_path.html",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"invalid_path.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test status code for http method GET with  path to resource folder outside root folder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fb2442d5-4405-4cdf-81cb-5eb291f5f7d9",
+						"exec": [
+							"pm.test('GET with forbidden path should return 403', function (){",
+							"    pm.response.to.have.status(403);",
+							"    console.log(\"Response status code: \" + pm.response.status + \" \" + pm.response.code);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/../resource2/secret.html",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"..",
+						"resource2",
+						"secret.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test status code for http method  POST with invalid body",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "643150bb-352f-4e0e-a6c4-3bb05302a3d7",
+						"exec": [
+							"pm.test('POST with invalid body should return status code 400', function (){",
+							"    pm.response.to.have.status(400);",
+							"    console.log(\"Response status code: \" + pm.response.status + \" \" + pm.response.code);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\":\"1234\"\n\"name\": \"postman\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,5 @@
+COPY . /usr/src/my_web_server
+WORKDIR /usr/src/my_web_server
+CMD ["bash", "./compile_and_run_my_web_server.sh"]
+#CMD ["bash", "./start_server_with_two_argument.sh"]
+

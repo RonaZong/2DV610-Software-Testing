@@ -1,0 +1,21 @@
+
+U
+%src/se/lnu/http/view/ConsoleView.java,f\2\f2e2fabefd657976b33feed82fecacdf68494974
+?
+MyWebServer.iml,6\e\6e18b0add1cfb47a45079fe42b9f8f03037f9274
+X
+(src/se/lnu/http/client/SocketClient.java,9\e\9eea77d1b37d91e152dbb4f92b16e818dc7a4c7b
+\
+,src/se/lnu/http/client/HTTPGetProtocoll.java,3\4\34f0fceaa90bead8b4994cf0c729e2f9b5e86b60
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+o
+?src/se/lnu/http/exceptions/WrongNumberOfArgumentsException.java,d\f\df4b6fcd740fc2e851d5908825eedf9b7c45e225
+V
+&src/se/lnu/http/HTTPServerConsole.java,3\9\39e087cec6d06773f05293c0d3238580e922ad0a
+I
+src/se/lnu/http/Port.java,2\5\2555a4fff38fc1bd98161fd25c4cf1d073d54b51
+Y
+)src/se/lnu/http/response/ContentType.java,7\0\70e8a16c3e9ed702c9f7661f28934bab9ddd16b4
+7
+LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859
